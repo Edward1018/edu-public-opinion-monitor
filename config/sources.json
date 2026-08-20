@@ -1,0 +1,61 @@
+{
+  "project": "教育舆情监测",
+  "version": "2.1",
+  "owner": "教育内容团队",
+  "description": "三层信息源注册表：政策源头（官方）/ 行业动态（大V机构公众号）/ 小红书生态（家长舆情）。v2.1：补全全部官网与公众号链接；鲸媒体公众号名为“多鲸”；新增公众号“市场人”。",
+  "layers": {
+    "L1_policy": {
+      "name": "政策源头（官方信息）",
+      "priority": "高",
+      "monitor_focus": "教育政策、新课标、考试改革、地方中高考政策、招生细则、学区划分",
+      "rule": "国家级（教育部官网 / 国务院政策文件库）必须包含；地方层面关注地方教育局官网或对应公众号，任一渠道命中即视为已覆盖。",
+      "sources": [
+        {"level": "国家级", "name": "教育部官网", "mandatory": true, "url": "http://www.moe.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=微言教育", "focus": "教育政策、新课标、考试改革", "freq": "每日"},
+        {"level": "国家级", "name": "国务院政策文件库", "mandatory": true, "url": "https://www.gov.cn/zhengce/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=中国政府网", "focus": "国家教育政策文件、规划纲要", "freq": "每日"},
+        {"level": "省级", "name": "北京市教委", "url": "https://jw.beijing.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=首都教育", "focus": "北京中高考政策、招生细则", "freq": "每周"},
+        {"level": "省级", "name": "上海市教委", "url": "https://edu.sh.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=上海教育", "focus": "上海中高考政策、招生细则", "freq": "每周"},
+        {"level": "省级", "name": "广东省教育厅", "url": "http://edu.gd.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=广东教育", "focus": "广东中高考政策、招生细则", "freq": "每周"},
+        {"level": "省级", "name": "江苏省教育厅", "url": "https://jyt.jiangsu.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=江苏教育发布", "focus": "江苏中高考政策、招生细则", "freq": "每周"},
+        {"level": "省级", "name": "浙江省教育厅", "url": "http://jyt.zj.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=浙江教育报", "focus": "浙江中高考政策、招生细则", "freq": "每周"},
+        {"level": "市级", "name": "北京市教委（学区/执行）", "url": "https://jw.beijing.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=首都教育", "focus": "北京学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "上海市教委（学区/执行）", "url": "https://edu.sh.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=上海教育", "focus": "上海学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "广州市教育局", "url": "http://jyj.gz.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=广州教育", "focus": "广州学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "深圳市教育局", "url": "http://szeb.sz.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=深圳教育", "focus": "深圳学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "杭州市教育局", "url": "http://edu.hangzhou.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=杭州教育发布", "focus": "杭州学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "南京市教育局", "url": "http://edu.nanjing.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=南京教育发布", "focus": "南京学区划分、具体执行细则", "freq": "每周"},
+        {"level": "市级", "name": "成都市教育局", "url": "http://edu.chengdu.gov.cn/", "wechat": "https://weixin.sogou.com/weixin?type=1&query=成都教育发布", "focus": "成都学区划分、具体执行细则", "freq": "每周"}
+      ]
+    },
+    "L2_industry": {
+      "name": "行业动态（大V/机构/媒体公众号）",
+      "priority": "中",
+      "monitor_focus": "行业热点、选题方向、政策解读角度、竞品动向、课程趋势、家长关注话题",
+      "rule": "统一以微信公众号检索获取（微信搜狗 weixin.sogou.com），搜索并关注以下机构/博主/媒体公众号，提取近1周推文与热点。",
+      "channel": "公众号（weixin.sogou.com 检索）",
+      "sources": [
+        {"type": "头部教育博主", "name": "哈佛亮爸", "wechat": "https://weixin.sogou.com/weixin?type=1&query=哈佛亮爸", "focus": "行业热点、选题方向", "freq": "每日"},
+        {"type": "头部教育博主", "name": "北大图图妈", "wechat": "https://weixin.sogou.com/weixin?type=1&query=北大图图妈", "focus": "行业热点、选题方向", "freq": "每日"},
+        {"type": "教育媒体", "name": "多知网", "wechat": "https://weixin.sogou.com/weixin?type=1&query=多知网", "focus": "行业动态、政策解读角度", "freq": "每日"},
+        {"type": "教育媒体", "name": "芥末堆", "wechat": "https://weixin.sogou.com/weixin?type=1&query=芥末堆", "focus": "行业动态、政策解读角度", "freq": "每日"},
+        {"type": "教育媒体", "name": "多鲸", "wechat": "https://weixin.sogou.com/weixin?type=1&query=多鲸", "focus": "（原鲸媒体）行业动态、融资与机构动向", "freq": "每周"},
+        {"type": "教育机构官方号", "name": "学而思", "wechat": "https://weixin.sogou.com/weixin?type=1&query=学而思", "focus": "竞品动向、课程趋势", "freq": "每周"},
+        {"type": "教育机构官方号", "name": "新东方", "wechat": "https://weixin.sogou.com/weixin?type=1&query=新东方", "focus": "竞品动向、课程趋势", "freq": "每周"},
+        {"type": "教育机构官方号", "name": "高思教育", "wechat": "https://weixin.sogou.com/weixin?type=1&query=高思教育", "focus": "竞品动向、课程趋势", "freq": "每周"},
+        {"type": "教育类公众号", "name": "爸爸真棒", "wechat": "https://weixin.sogou.com/weixin?type=1&query=爸爸真棒", "focus": "家长关注的话题方向", "freq": "每周"},
+        {"type": "教育类公众号", "name": "外滩教育", "wechat": "https://weixin.sogou.com/weixin?type=1&query=外滩教育", "focus": "家长关注的话题方向", "freq": "每周"},
+        {"type": "教育类公众号", "name": "市场人", "wechat": "https://weixin.sogou.com/weixin?type=1&query=市场人", "focus": "教育行业营销、招生获客、机构运营", "freq": "每周"}
+      ]
+    },
+    "L3_xiaohongshu": {
+      "name": "小红书生态监测（家长舆情）",
+      "priority": "高",
+      "monitor_focus": "家长搜索热词、高热笔记议题、同类账号讨论、评论区真实痛点",
+      "sources": [
+        {"dimension": "关键词搜索", "name": "小红书核心词下拉/热门笔记", "url": "https://www.xiaohongshu.com/search_result", "method": "搜索核心词看下拉词和热门笔记，了解家长在搜什么教育话题", "freq": "每日"},
+        {"dimension": "高热笔记议题", "name": "高赞笔记标题/封面/结构", "url": "https://www.xiaohongshu.com/explore", "method": "分析高热笔记讨论的议题与情绪，把握家长关注焦点", "freq": "每日"},
+        {"dimension": "同类账号讨论", "name": "相关账号高互动笔记", "url": "https://www.xiaohongshu.com/search_result", "method": "监测相关账号的高互动笔记，发现家长关注空白", "freq": "每周"},
+        {"dimension": "评论区洞察", "name": "高热笔记评论区", "url": "https://www.xiaohongshu.com/search_result", "method": "看高热笔记评论区家长在问什么，发现真实痛点", "freq": "每日"}
+      ]
+    }
+  }
+}

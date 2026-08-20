@@ -1,0 +1,71 @@
+{
+  "date": "2026-08-12",
+  "note": "示例数据：展示教育舆情监测采集格式（L1/L2/L3 三层 + L3 维度字段）。真实采集用 `collect.py new && collect.py add` 逐条追加。",
+  "items": [
+    {
+      "layer": "L1",
+      "source": "教育部官网",
+      "url": "https://www.moe.gov.cn/srcsite/A06/s3325/202608/t20260815_111111.html",
+      "title": "教育部办公厅关于开展阳光招生专项行动（2026）的通知",
+      "summary": "教基厅函〔2026〕8号，要求各地严格落实阳光招生，规范招生入学秩序。",
+      "pub_date": "2026-08-15",
+      "heat": 5
+    },
+    {
+      "layer": "L1",
+      "source": "国务院政策文件库",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202608/content_111111.htm",
+      "title": "教育发展「十五五」规划（国发〔2026〕19号）",
+      "summary": "国务院印发教育发展十五五规划，深化集团化办学与城乡学校共同体建设。",
+      "pub_date": "2026-08-14",
+      "heat": 5
+    },
+    {
+      "layer": "L1",
+      "source": "北京市教委",
+      "url": "https://jw.beijing.gov.cn/xxgk/zfxxgkml/zfgb/2026/dsj/...",
+      "title": "2026年北京市高级中等学校考试招生工作意见",
+      "summary": "京教计〔2026〕5号，明确2026北京中考招生录取规则。",
+      "pub_date": "2026-08-17",
+      "heat": 4
+    },
+    {
+      "layer": "L2",
+      "source": "新东方",
+      "url": "https://www.stcn.com/article/detail/example.html",
+      "title": "新东方2026财年净利润同比增长27.8%，教育新业务与AI成核心引擎",
+      "summary": "新东方公布FY26业绩：营收56.61亿美元（+15.5%），股东应占净利润4.75亿美元（+27.8%），AI成组织级核心优先级。",
+      "pub_date": "2026-08-15",
+      "heat": 4
+    },
+    {
+      "layer": "L2",
+      "source": "哈佛亮爸",
+      "url": "https://weixin.sogou.com/weixin?type=1&query=%E5%93%88%E4%BD%9B%E4%BA%AE%E7%88%B8",
+      "title": "哈佛亮爸谈超前学：普通孩子数学不能靠背，超前学大多是表演",
+      "summary": "数学核心是独立思考与推导；普通孩子靠背结论的超前学表面满意、实则学了个寂寞。",
+      "pub_date": "2026-08-17",
+      "heat": 4
+    },
+    {
+      "layer": "L3",
+      "source": "小红书",
+      "dimension": "关键词搜索",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%95%99%E8%82%B2%E7%83%AD%E8%AF%8D",
+      "title": "小红书家长搜索热词2026：英语启蒙/Python入门/双职工带娃成高频品类词",
+      "summary": "小红书家长端搜索呈现精准引流与焦虑解决特征：品类截流词、场景破圈词、身份认同词三类高热。",
+      "pub_date": "2026-08-18",
+      "heat": 4
+    },
+    {
+      "layer": "L3",
+      "source": "小红书",
+      "dimension": "高热笔记议题",
+      "url": "https://www.xiaohongshu.com/explore",
+      "title": "高热笔记议题：『孩子越催越懒』反思式育儿笔记爆火，单条点赞破120万",
+      "summary": "反思式育儿笔记破10万篇，归因首次从『向外找替罪羊』转向『反思自身过度干预』。",
+      "pub_date": "2026-08-19",
+      "heat": 4
+    }
+  ]
+}
